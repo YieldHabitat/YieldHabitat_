@@ -19,7 +19,9 @@ YieldHabitat democratizes real estate investing by:
 
 Our platform uses a layered architecture to ensure scalability and maintainability:
 
-![Technical Architecture](docs/architecture.md)
+<div align="center">
+  <img src="assets/architecture.svg" alt="Technical Architecture" width="700" />
+</div>
 
 For more details, see our [Technical Architecture Documentation](docs/architecture.md).
 

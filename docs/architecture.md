@@ -4,85 +4,7 @@ This document provides a detailed overview of the YieldHabitat platform's techni
 
 ## System Architecture Diagram
 
-```mermaid
-graph TD
-    subgraph "Frontend Layer"
-        FE[Next.js Frontend Application]
-        WA[Wallet Adapters]
-        UI[UI Components]
-        FE --> WA
-        FE --> UI
-    end
-
-    subgraph "Backend Layer"
-        API[Express API Server]
-        AUTH[Authentication Service]
-        PROP[Property Service]
-        TRANS[Transaction Service]
-        USER[User Service]
-        API --> AUTH
-        API --> PROP
-        API --> TRANS
-        API --> USER
-    end
-
-    subgraph "Data Layer"
-        DB[(MongoDB)]
-        CACHE[(Redis Cache)]
-        IPFS[(IPFS Storage)]
-        AUTH --> DB
-        PROP --> DB
-        TRANS --> DB
-        USER --> DB
-        API --> CACHE
-        PROP --> IPFS
-    end
-
-    subgraph "Blockchain Layer"
-        SOL[Solana Network]
-        ETH[Ethereum Network]
-        BSC[Binance Smart Chain]
-        POLY[Polygon Network]
-        BRIDGE[Cross-Chain Bridge]
-        
-        SOL --- BRIDGE
-        ETH --- BRIDGE
-        BSC --- BRIDGE
-        POLY --- BRIDGE
-    end
-
-    subgraph "Smart Contract Layer"
-        PCT[Property Tokenization Contracts]
-        MKT[Marketplace Contracts]
-        REG[Registry Contracts]
-        
-        PCT --> SOL
-        PCT --> ETH
-        PCT --> BSC
-        PCT --> POLY
-        
-        MKT --> SOL
-        MKT --> ETH
-        MKT --> BSC
-        MKT --> POLY
-        
-        REG --> SOL
-        REG --> ETH
-        REG --> BSC
-        REG --> POLY
-    end
-
-    WA --> SOL
-    WA --> ETH
-    WA --> BSC
-    WA --> POLY
-    
-    API --> PCT
-    API --> MKT
-    API --> REG
-
-    FE --> API
-```
+![Technical Architecture](../assets/architecture.svg)
 
 ## Architecture Overview
 
@@ -111,6 +33,8 @@ YieldHabitat's architecture is organized into several distinct layers, each with
 - **Binance Smart Chain**: Low-fee alternative blockchain
 - **Polygon Network**: Scalable solution for high-frequency transactions
 - **Cross-Chain Bridge**: Custom bridge solution enabling token transfers between chains
+
+![Bridge Architecture](../assets/bridge-architecture.svg)
 
 ### Smart Contract Layer
 - **Property Tokenization Contracts**: Manage creation and distribution of property tokens
