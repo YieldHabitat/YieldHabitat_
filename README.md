@@ -3,7 +3,7 @@
 YieldHabitat is a revolutionary real estate tokenization platform built on multiple blockchains, including Solana, Ethereum, Binance Smart Chain, and Polygon. It allows users to purchase fractional ownership in premium real estate properties through tokenization, creating opportunities for small investors to access high-value real estate markets.
 
 <div align="center">
-  <img src="assets/logo.png" alt="YieldHabitat Logo" width="200" />
+  <img src="assets/logo.svg" alt="YieldHabitat Logo" width="200" />
 </div>
 
 ## Core Value Proposition
@@ -14,6 +14,14 @@ YieldHabitat democratizes real estate investing by:
 - **Expanding Geographic Access**: Invest in international properties without legal complexity
 - **Providing Passive Income**: Earn rental yields paid directly to your wallet
 - **Offering Asset Diversification**: Spread investment across multiple properties and markets
+
+## Technical Architecture
+
+Our platform uses a layered architecture to ensure scalability and maintainability:
+
+![Technical Architecture](docs/architecture.md)
+
+For more details, see our [Technical Architecture Documentation](docs/architecture.md).
 
 ## Minimum Viable Product (MVP)
 
