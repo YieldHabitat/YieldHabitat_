@@ -1,0 +1,47 @@
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+property_tokenization = "PTok1111111111111111111111111111111111111"
+marketplace = "Mrkt1111111111111111111111111111111111111"
+registry = "Rgst1111111111111111111111111111111111111"
+
+[programs.devnet]
+property_tokenization = "PTok1111111111111111111111111111111111111"
+marketplace = "Mrkt1111111111111111111111111111111111111"
+registry = "Rgst1111111111111111111111111111111111111"
+
+[programs.mainnet]
+property_tokenization = "PTok1111111111111111111111111111111111111"
+marketplace = "Mrkt1111111111111111111111111111111111111"
+registry = "Rgst1111111111111111111111111111111111111"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[test]
+startup_wait = 10000
+
+[test.validator]
+url = "https://api.devnet.solana.com"
+
+[[test.validator.clone]]
+address = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"  # SPL Token Program ID
+
+[[test.validator.clone]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"  # Metaplex Token Metadata Program ID
+
+[workspace]
+members = [
+  "programs/property-tokenization",
+  "programs/marketplace",
+  "programs/registry"
+] 

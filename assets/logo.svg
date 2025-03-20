@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <!-- 3D Luxury Real Estate Logo -->
+  <defs>
+    <!-- Gradients for 3D effect -->
+    <linearGradient id="main-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03045e" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+    <linearGradient id="roof-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b4d8" />
+      <stop offset="100%" stop-color="#90e0ef" />
+    </linearGradient>
+    <linearGradient id="glass-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#caf0f8" />
+      <stop offset="100%" stop-color="#ade8f4" />
+    </linearGradient>
+    <linearGradient id="ground-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03045e" />
+      <stop offset="100%" stop-color="#023e8a" />
+    </linearGradient>
+    <filter id="gold-shine">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
+      <feSpecularLighting result="spec" in="blur" specularExponent="20" lighting-color="#fff">
+        <fePointLight x="150" y="60" z="20" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spec" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="3" dy="5" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#shadow)">
+    <!-- Base/Ground -->
+    <ellipse cx="150" cy="215" rx="100" ry="15" fill="url(#ground-gradient)" />
+    
+    <!-- Main Building Structure -->
+    <!-- Central Tower -->
+    <path d="M125,200 L125,100 L175,100 L175,200 Z" fill="url(#main-gradient)" />
+    
+    <!-- Left Wing -->
+    <path d="M75,200 L75,140 L125,140 L125,200 Z" fill="url(#main-gradient)" />
+    
+    <!-- Right Wing -->
+    <path d="M175,200 L175,140 L225,140 L225,200 Z" fill="url(#main-gradient)" />
+    
+    <!-- Roof Elements -->
+    <path d="M125,100 L150,70 L175,100 Z" fill="url(#roof-gradient)" />
+    <path d="M75,140 L100,120 L125,140 Z" fill="url(#roof-gradient)" />
+    <path d="M175,140 L200,120 L225,140 Z" fill="url(#roof-gradient)" />
+    
+    <!-- Luxury Glass Front (Central) -->
+    <path d="M135,120 L135,190 L165,190 L165,120 Z" fill="url(#glass-gradient)" opacity="0.8" />
+    <path d="M135,120 L135,125 L165,125 L165,120 Z" fill="#00b4d8" />
+    <path d="M135,140 L135,145 L165,145 L165,140 Z" fill="#00b4d8" />
+    <path d="M135,160 L135,165 L165,165 L165,160 Z" fill="#00b4d8" />
+    
+    <!-- Windows (Left Wing) -->
+    <rect x="85" y="150" width="10" height="20" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    <rect x="105" y="150" width="10" height="20" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    <rect x="85" y="180" width="10" height="10" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    <rect x="105" y="180" width="10" height="10" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    
+    <!-- Windows (Right Wing) -->
+    <rect x="185" y="150" width="10" height="20" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    <rect x="205" y="150" width="10" height="20" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    <rect x="185" y="180" width="10" height="10" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    <rect x="205" y="180" width="10" height="10" rx="1" ry="1" fill="url(#glass-gradient)" opacity="0.8" />
+    
+    <!-- Luxury Gold Accents -->
+    <path d="M125,100 L175,100" stroke="#ffd700" stroke-width="2" filter="url(#gold-shine)" />
+    <path d="M75,140 L125,140" stroke="#ffd700" stroke-width="2" filter="url(#gold-shine)" />
+    <path d="M175,140 L225,140" stroke="#ffd700" stroke-width="2" filter="url(#gold-shine)" />
+    <path d="M125,200 L175,200" stroke="#ffd700" stroke-width="2" filter="url(#gold-shine)" />
+    <path d="M75,200 L125,200" stroke="#ffd700" stroke-width="2" filter="url(#gold-shine)" />
+    <path d="M175,200 L225,200" stroke="#ffd700" stroke-width="2" filter="url(#gold-shine)" />
+    
+    <!-- Entrance -->
+    <rect x="145" y="180" width="10" height="20" rx="2" ry="2" fill="#ade8f4" />
+  </g>
+</svg> 
