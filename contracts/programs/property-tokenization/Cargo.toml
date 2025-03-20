@@ -1,0 +1,19 @@
+[package]
+name = "property-tokenization"
+version = "0.1.0"
+edition = "2021"
+description = "Property tokenization program for YieldHabitat platform"
+license = "MIT"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "1.16.0"
+thiserror = "1.0.40"
+arrayref = "0.3.7"
+spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
+borsh = "0.10.3"
+
+[lib]
+crate-type = ["cdylib", "lib"] 
