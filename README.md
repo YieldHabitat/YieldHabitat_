@@ -211,25 +211,25 @@ For more detailed information:
 
 ## Roadmap
 
-### Q2 2023 - Foundation
+### Phase 1 - Foundation
 - Launch MVP on Solana blockchain
 - Implement basic property tokenization
 - Develop investor dashboard
 - Establish legal framework
 
-### Q3 2023 - Expansion
+### Phase 2 - Expansion
 - Add Ethereum blockchain support
 - Implement secondary marketplace
 - Expand property offerings
 - Enhance user experience
 
-### Q4 2023 - Ecosystem
+### Phase 3 - Ecosystem
 - Launch on BSC and Polygon networks
 - Implement cross-chain bridge
 - Introduce yield farming opportunities
 - Add mobile application
 
-### Q1 2024 - Growth
+### Phase 4 - Growth
 - Add institutional investment tools
 - Implement DAO governance features
 - Expand to additional markets

@@ -1,43 +1,42 @@
 # YieldHabitat Documentation
 
-This directory contains comprehensive documentation for the YieldHabitat platform.
+Welcome to the YieldHabitat documentation directory. This repository contains comprehensive documentation for the YieldHabitat platform.
 
-## Documentation Structure
+## Documentation Contents
 
-```
-docs/
-├── api/              # API documentation
-├── architecture/     # System architecture diagrams and descriptions
-├── contracts/        # Smart contract documentation
-│   ├── property/     # Property tokenization contract docs
-│   ├── marketplace/  # Marketplace contract docs
-│   └── registry/     # Registry contract docs
-├── frontend/         # Frontend application documentation
-├── guides/           # User and developer guides
-│   ├── setup.md      # Setup guide
-│   ├── development.md # Development guide
-│   └── deployment.md # Deployment guide
-├── images/           # Documentation images
-└── README.md         # This file
-```
+### API Documentation
+- [API Documentation](./api.md) - Detailed information about YieldHabitat's RESTful API endpoints
 
-## API Documentation
+### Blockchain Integration
+- [Multi-Chain Integration](./blockchain-integration.md) - Technical details about YieldHabitat's integration with multiple blockchains
 
-API documentation is generated from the backend code and saved in the `api` directory. You can also view the interactive API documentation by running the backend server and visiting `/api-docs` endpoint.
+### Architecture
+- [Technical Architecture](./architecture.md) - System architecture diagram and component descriptions
 
-## Architecture
+### Component Documentation
+- [Frontend Documentation](../frontend/README.md) - Documentation for the frontend application
+- [Backend Documentation](../backend/README.md) - Documentation for the backend API server
+- [Smart Contracts Documentation](../contracts/README.md) - Documentation for blockchain smart contracts
 
-The `architecture` directory contains system diagrams and descriptions of how the different components of YieldHabitat interact with each other.
+## Architecture Diagrams
 
-## Development Documentation
+The architecture diagrams can be found in the `assets` directory and in the [Technical Architecture](./architecture.md) document:
+- Technical Architecture Overview
+- Cross-Chain Bridge Architecture
+- Data Flow Diagrams
 
-Developer-focused documentation is available in the `guides` directory, including setup instructions, development workflows, and deployment procedures.
+## Getting Started
+
+For new developers joining the project, we recommend starting with:
+1. The main [README.md](../README.md) file in the root directory
+2. [Technical Architecture](./architecture.md) document for system overview
+3. Component-specific documentation based on your area of focus
+4. API documentation for understanding data flows
 
 ## Contributing to Documentation
 
-When contributing to the documentation:
-
-1. Use Markdown for all documentation files
-2. Place any images in the `images` directory
-3. Keep the documentation up-to-date with code changes
-4. Follow the existing structure and style 
+When adding or updating documentation:
+1. Follow the existing format and style
+2. Include code examples where appropriate
+3. Add cross-references to related documentation
+4. Update this index file if adding new documentation files 

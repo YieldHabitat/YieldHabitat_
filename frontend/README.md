@@ -1,128 +1,146 @@
 # YieldHabitat Frontend
 
-This is the frontend application for the YieldHabitat platform, a real estate tokenization platform built on the Solana blockchain.
+This directory contains the frontend application for YieldHabitat - a real estate tokenization platform.
 
-## Tech Stack
+## Architecture
 
-- Next.js 13
-- React
-- TypeScript
-- Tailwind CSS
-- Solana Web3.js
+The frontend is built using a modern React stack with Next.js for server-side rendering and improved SEO performance. The architecture follows these principles:
+
+- **Component-Based Design**: Reusable UI components organized by function and complexity
+- **State Management**: Context API for app-wide state with local state for component-specific needs
+- **Responsive Design**: Mobile-first approach using Tailwind CSS
+- **Multi-Wallet Integration**: Support for multiple blockchain wallets
+
+## Directory Structure
+
+```
+frontend/
+├── public/                # Static files (images, fonts)
+├── src/
+│   ├── components/        # Reusable UI components
+│   │   ├── common/        # Shared components (buttons, inputs, etc.)
+│   │   ├── layout/        # Layout components (header, footer, etc.)
+│   │   ├── property/      # Property-related components
+│   │   ├── wallet/        # Wallet integration components
+│   │   └── dashboard/     # Dashboard components
+│   ├── context/           # React Context for state management
+│   ├── hooks/             # Custom React hooks
+│   ├── pages/             # Next.js pages
+│   ├── services/          # API and blockchain services
+│   ├── styles/            # Global styles and Tailwind configuration
+│   ├── types/             # TypeScript type definitions
+│   └── utils/             # Utility functions
+└── tests/                 # Test files
+```
+
+## Key Features
+
+### Multi-Wallet Integration
+The frontend supports multiple blockchain wallets:
+- Phantom (Solana)
+- MetaMask (Ethereum, BSC, Polygon)
+- Solflare (Solana)
+- WalletConnect (Multiple chains)
+
+### Property Marketplace
+- Browse listings with filter and sort capabilities
+- Detailed property views with metrics and documentation
+- Interactive maps for property locations
+- Real-time data on available tokens and pricing
+
+### Investor Dashboard
+- Portfolio overview with visualization charts
+- Transaction history with filtering options
+- Yield tracking and distribution history
+- Property management for token owners
+
+### Authentication and Security
+- Wallet-based authentication with signature verification
+- KYC integration for regulatory compliance
+- Role-based access control
+- Secure API communication with JWT
 
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js 16.x or higher
 - npm or yarn
+- A modern web browser
 
 ### Installation
 
 1. Install dependencies:
-
 ```bash
 npm install
 ```
 
-or with yarn:
-
+2. Set up environment variables:
 ```bash
-yarn
+cp .env.example .env.local
 ```
-
-2. Set up environment variables by creating a `.env.local` file in the root directory with the following variables:
-
-```
-NEXT_PUBLIC_API_URL=http://localhost:5000/api
-NEXT_PUBLIC_SOLANA_RPC_URL=https://api.devnet.solana.com
-```
+Edit the `.env.local` file with appropriate values.
 
 3. Start the development server:
-
 ```bash
 npm run dev
 ```
 
-or with yarn:
+The application will be available at http://localhost:3000.
 
-```bash
-yarn dev
-```
-
-The application will be accessible at http://localhost:3000.
-
-## Project Structure
-
-```
-frontend/
-├── public/            # Static assets
-├── src/
-│   ├── app/           # Next.js app router components
-│   ├── components/    # Reusable UI components
-│   ├── contexts/      # React contexts (wallet, auth, etc.)
-│   ├── hooks/         # Custom React hooks
-│   ├── lib/           # Utilities and helpers
-│   ├── services/      # API service functions
-│   ├── styles/        # Global styles
-│   └── types/         # TypeScript type definitions
-├── node_modules/
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-├── tsconfig.json
-└── README.md
-```
-
-## Features
-
-- Property browsing and detailed views
-- Token purchase user interface
-- Wallet integration for Solana transactions
-- User profile and transaction history
-- Responsive design for all device sizes
-
-## Development
-
-### Building for Production
+## Building for Production
 
 ```bash
 npm run build
+npm run start
 ```
 
-or with yarn:
+## Testing
 
 ```bash
-yarn build
+# Run unit tests
+npm run test
+
+# Run end-to-end tests
+npm run test:e2e
+
+# Run test coverage
+npm run test:coverage
 ```
 
-### Running Production Build Locally
+## Styling
 
-```bash
-npm start
-```
+This project uses Tailwind CSS for styling. The configuration can be found in `tailwind.config.js`.
 
-or with yarn:
+To add or modify styles:
+1. For component-specific styles, use Tailwind utility classes directly in the component
+2. For reusable styles, create components in the `components/common` directory
+3. For global styles, edit the files in the `styles` directory
 
-```bash
-yarn start
-```
+## State Management
 
-### Linting
+The application uses a combination of:
+- React Context API for global state (user, wallet, selected property)
+- Local component state for UI-specific functionality
+- SWR for data fetching and caching
 
-```bash
-npm run lint
-```
+## Blockchain Integration
 
-or with yarn:
+Blockchain integration is handled through:
+- Wallet adapter components in `components/wallet`
+- Blockchain-specific services in `services/blockchain`
+- Web3 utility functions in `utils/web3`
 
-```bash
-yarn lint
-```
+## Contribution Guidelines
 
-## Future Implementations
+1. Create a feature branch off the `dev` branch
+2. Make your changes following the code style guide
+3. Write tests for your changes
+4. Submit a pull request
+5. Update documentation as needed
 
-- More comprehensive wallet integration features
-- Real-time property updates
-- Expanded property filtering and searching
-- Investment portfolio analytics 
+## Performance Optimizations
+
+- Component code splitting for reduced bundle sizes
+- Image optimization with Next.js Image component
+- Server-side rendering for improved SEO and initial load time
+- Caching strategies for blockchain and API data 
