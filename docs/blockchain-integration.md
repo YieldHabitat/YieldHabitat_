@@ -42,9 +42,7 @@ YieldHabitat currently supports the following blockchains:
 
 The YieldHabitat cross-chain bridge enables users to transfer property tokens between different blockchain networks.
 
-### Architecture
-
-![Cross-Chain Bridge Architecture](../assets/bridge-architecture.png)
+### Bridge Components
 
 The bridge operates through the following components:
 
