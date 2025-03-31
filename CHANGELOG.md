@@ -2,6 +2,28 @@
 
 All notable changes to the YieldHabitat platform will be documented in this file.
 
+## [v1.03.0] - 2023-06-29
+
+### Added
+- Enhanced cross-chain bridge functionality
+- New property analytics dashboard
+- Improved token holder voting system
+
+### Changed
+- Updated smart contract optimizations for better gas efficiency
+- Enhanced UI/UX for property token trading
+- Improved mobile responsiveness for property details
+
+### Fixed
+- Resolved cross-chain transaction verification issues
+- Fixed property data synchronization between chains
+- Addressed token holder voting calculation bugs
+
+### Security
+- Enhanced cross-chain bridge security measures
+- Improved transaction validation across chains
+- Additional audit layer for bridge contracts
+
 ## [v1.02.0] - 2023-06-22
 
 ### Added

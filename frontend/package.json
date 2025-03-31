@@ -1,6 +1,6 @@
 {
   "name": "yieldhabitat-frontend",
-  "version": "1.02.0",
+  "version": "1.03.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

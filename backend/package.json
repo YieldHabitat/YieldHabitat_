@@ -1,6 +1,6 @@
 {
-  "name": "yieldhabitat-api",
-  "version": "1.02.0",
+  "name": "yieldhabitat-backend",
+  "version": "1.03.0",
   "description": "API server for YieldHabitat platform",
   "main": "dist/index.js",
   "scripts": {
