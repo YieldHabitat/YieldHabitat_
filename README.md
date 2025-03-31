@@ -238,7 +238,7 @@ For more detailed information:
 ## 📞 Contact & Social Media
 
 - 🌐 Website: [yieldhabitat.online](https://yieldhabitat.online)
-- 🐦 Twitter: [@YieldHabitat_](https://x.com/YieldHabitat_)
+- 🐦 Twitter: [@yield_habitat](https://x.com/yield_habitat/)
 - 💻 GitHub: [YieldHabitat](https://github.com/YieldHabitat/YieldHabitat_)
 
 ## 📄 License
