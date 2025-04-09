@@ -114,7 +114,7 @@ This project is organized with the following structure:
 
 ### 📋 Prerequisites
 
-- Node.js 16.x or higher
+- Node.js 20.x or higher
 - npm or yarn
 - Docker and Docker Compose (for containerized development)
 - Solana CLI tools (for Solana contracts)
